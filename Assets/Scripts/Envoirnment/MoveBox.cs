@@ -29,7 +29,7 @@ public class MoveBox : MonoBehaviour
     {
         transform.SetParent(muzzle);
         Destroy(rig);
-        transform.localPosition = new Vector3(3, 0, 0);
+        transform.localPosition = new Vector3(2.5f, 0, 0);
 
     }
     public void DropBox()
