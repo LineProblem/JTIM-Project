@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Box
   - Interactable
+  - Fridge
   layers:
   - Default
   - TransparentFX
