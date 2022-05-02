@@ -15,9 +15,8 @@ public class PlayerControl : MonoBehaviour
 
     // private variables
     private GameObject interactable;
-    private MoveBox box;
-    private MoveBox heldBox;
-    private bool holding_box;
+    public MoveBox box;
+    public bool holding_box;
     private int curJumps;
     private float curMoveInput;
 
@@ -54,6 +53,7 @@ public class PlayerControl : MonoBehaviour
         }
         else if (collision.CompareTag("Interactable"))
         {
+            print("Interacable");
             interactable = collision.gameObject;
         }
     }
@@ -95,6 +95,10 @@ public class PlayerControl : MonoBehaviour
                 if (interactable.GetComponent<Door>())
                 {
                     interactable.GetComponent<Door>().interact();
+                }
+                else if (interactable.GetComponent<FridgeScript>())
+                {
+                    interactable.GetComponent<FridgeScript>().interact();
                 }
             }
 
