@@ -64,7 +64,7 @@ public class PlayerControl : MonoBehaviour
         {
             box = null;
         }
-        else if (collision.CompareTag("Interactable"))
+        if (collision.CompareTag("Interactable"))
         {
             interactable = null;
         }
@@ -74,23 +74,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Action button was pressed");
-            if (box)
-            {
-                if (!holding_box)
-                {
-                    Debug.Log("Picking up");
-                    holding_box = true;
-                    box.PickUp();
-                }
-                else if (holding_box)
-                {
-                    Debug.Log("Dropping");
-                    holding_box = false;
-                    box.DropBox();
-                }
-            }
-            else if (interactable)
+            if (interactable)
             {
                 if (interactable.GetComponent<Door>())
                 {
@@ -100,7 +84,26 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<FridgeScript>().interact();
                 }
+                else if (interactable.GetComponent<Microwave>())
+                {
+                    interactable.GetComponent<FridgeScript>().interact();
+                }
+
             }
+            else if (box)
+            {
+                if (!holding_box)
+                {
+                    holding_box = true;
+                    box.PickUp();
+                }
+                else if (holding_box)
+                {
+                    holding_box = false;
+                    box.DropBox();
+                }
+            }
+            
 
         }
     }
