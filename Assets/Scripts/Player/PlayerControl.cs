@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     public Rigidbody2D rig;
 
     // private variables
+    [Header("Accessed by other objects")]
     private GameObject interactable;
     public MoveBox box;
     public bool holding_box;
@@ -53,7 +54,7 @@ public class PlayerControl : MonoBehaviour
         {
             box = collision.GetComponent<MoveBox>();
         }
-        else if (collision.CompareTag("Interactable"))
+        else if (collision.gameObject.layer == 6)
         {
             interactable = collision.gameObject;
         }
@@ -63,9 +64,10 @@ public class PlayerControl : MonoBehaviour
     {
         if (collision.CompareTag("Box"))
         {
-            box = null;
+            if (!holding_box)
+                box = null;
         }
-        else if (collision.CompareTag("Interactable"))
+        else if (collision.gameObject.layer == 6)
         {
             interactable = null;
         }
@@ -77,17 +79,17 @@ public class PlayerControl : MonoBehaviour
         {
             if (interactable)
             {
-                if (interactable.GetComponent<Door>())
+                if (interactable.CompareTag("Door"))
                 {
                     interactable.GetComponent<Door>().interact();
                 }
-                else if (interactable.GetComponent<FridgeScript>())
+                else if (interactable.CompareTag("Fridge"))
                 {
                     interactable.GetComponent<FridgeScript>().interact();
                 }
-                else if (interactable.GetComponent<Microwave>())
+                else if (interactable.CompareTag("Microwave"))
                 {
-                    interactable.GetComponent<FridgeScript>().interact();
+                    interactable.GetComponent<Microwave>().interact();
                 }
 
             }

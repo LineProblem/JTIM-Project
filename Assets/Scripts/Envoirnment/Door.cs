@@ -7,8 +7,10 @@ public class Door : MonoBehaviour
 
     public Vector2 destination;
     public Transform player;
-    public Camera Camera;
+    public CameraScript Camera;
     public Vector2 cameraPos;
+    public float newCameraMin;
+    public float newCameraMax;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,10 @@ public class Door : MonoBehaviour
     public void interact()
     {
         player.position = destination;
-        Camera.transform.position = new Vector3(cameraPos.x, cameraPos.y, Camera.transform.position.z);
+        Camera.xMin = newCameraMin;
+        Camera.xMax = newCameraMax;
+        Camera.GetComponent<Transform>().position = new Vector3(cameraPos.x, cameraPos.y, Camera.transform.position.z);
+
     }
     // Update is called once per frame
     void Update()

@@ -30,6 +30,7 @@ public class FridgeScript : MonoBehaviour
             // uncomment once in the actual game
             player.box = box;
             player.holding_box = true;
+            box.transform.position = transform.position;
             box.PickUp();
             box.GetComponentInParent<SpriteRenderer>().sortingOrder = 100;
             spriteRend.sprite = emptyFridge;

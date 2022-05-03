@@ -9,6 +9,8 @@ public class MoveBox : MonoBehaviour
     public GameObject boxes;
     public Rigidbody2D rig;
 
+    private float grav;
+
 
 
 
@@ -16,6 +18,7 @@ public class MoveBox : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        grav = rig.gravityScale;
         muzzle = GameObject.Find("Muzzle (1)").GetComponent<Transform>();
     }
 
@@ -39,9 +42,7 @@ public class MoveBox : MonoBehaviour
         gameObject.AddComponent<Rigidbody2D>();
         rig = this.GetComponent<Rigidbody2D>();
         rig.mass = 10;
-        
-        
-        
+        rig.gravityScale = grav;
     }
 
 }

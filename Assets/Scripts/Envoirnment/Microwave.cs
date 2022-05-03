@@ -15,9 +15,15 @@ public class Microwave : MonoBehaviour
 
     public void interact()
     {
+        // if what the player is holding is what can fit in the microwave
         if (player.box == box)
         {
-            print("Start microwave");
+            // stops the player box
+            player.holding_box = false;
+            box.DropBox();
+
+            // if anyone knows why the destroy function wasn't working here, that would be helpful to use instead of this
+            box.transform.position = new Vector3(-1000, 0, 0);
         }
     }
 
