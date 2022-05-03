@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -739714291337285253
     second: pH64_furniture_OGA_alpha_7
+  - first:
+      213: -4895481459583089507
+    second: pH64_furniture_OGA_alpha_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -304,6 +307,27 @@ TextureImporter:
         x: 223
         y: 111
         width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71bf8d65c10cb5f0800000000000000
+      internalID: -739714291337285253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pH64_furniture_OGA_alpha_8
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 111
+        width: 31
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,8 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b71bf8d65c10cb5f0800000000000000
-      internalID: -739714291337285253
+      spriteID: d940a05cc81cf0cb0800000000000000
+      internalID: -4895481459583089507
       vertices: []
       indices: 
       edges: []

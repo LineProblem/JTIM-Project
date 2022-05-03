@@ -7,7 +7,9 @@ public class PlayerControl : MonoBehaviour
 {
     [Header("Settings")]
     public int moveSpeed;
+    public float maxJumpForce;
     public float jumpForce;
+    public float reducedJumpForce;
     public int maxJumps;
 
     [Header("Components")]
@@ -23,7 +25,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,7 +55,6 @@ public class PlayerControl : MonoBehaviour
         }
         else if (collision.CompareTag("Interactable"))
         {
-            print("Interacable");
             interactable = collision.gameObject;
         }
     }
@@ -64,7 +65,7 @@ public class PlayerControl : MonoBehaviour
         {
             box = null;
         }
-        if (collision.CompareTag("Interactable"))
+        else if (collision.CompareTag("Interactable"))
         {
             interactable = null;
         }
@@ -103,7 +104,7 @@ public class PlayerControl : MonoBehaviour
                     box.DropBox();
                 }
             }
-            
+
 
         }
     }
@@ -135,6 +136,6 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

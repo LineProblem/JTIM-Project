@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveBox : MonoBehaviour
 {
     [SerializeField]
-    public Transform muzzle;
+    private Transform muzzle;
     public GameObject boxes;
     public Rigidbody2D rig;
 
@@ -16,6 +16,7 @@ public class MoveBox : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        muzzle = GameObject.Find("Muzzle (1)").GetComponent<Transform>();
     }
 
     // Update is called once per frame
