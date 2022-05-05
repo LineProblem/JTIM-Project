@@ -16,10 +16,13 @@ public class FridgeScript : MonoBehaviour
     public Sprite openFridge;
     public Sprite emptyFridge;
 
+    private bool boxGrabbed = false;
+    private GameControl gameControl;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        gameControl = FindObjectOfType<GameControl>();
     }
 
     public void interact()
@@ -34,10 +37,26 @@ public class FridgeScript : MonoBehaviour
             box.PickUp();
             box.GetComponentInParent<SpriteRenderer>().sortingOrder = 100;
             spriteRend.sprite = emptyFridge;
+            boxGrabbed = true;
+
+            // update objective list
+            gameControl.objectives.Add("Cook burrito in microwave");
+            gameControl.objectives.Remove("Find food in fridge");
         }
         else if (spriteRend.sprite == closedFridge)
         {
-            spriteRend.sprite = openFridge;
+            if (!boxGrabbed)
+            {
+                spriteRend.sprite = openFridge;
+            }
+            else
+            {
+                spriteRend.sprite = emptyFridge;
+            }
+        }
+        else if (spriteRend.sprite == emptyFridge)
+        {
+            spriteRend.sprite = closedFridge;
         }
     }
 

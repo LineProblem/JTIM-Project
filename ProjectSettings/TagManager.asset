@@ -9,6 +9,8 @@ TagManager:
   - Fridge
   - Door
   - Microwave
+  - Shower
+  - Toilet
   layers:
   - Default
   - TransparentFX

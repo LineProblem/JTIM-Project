@@ -91,6 +91,14 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<Microwave>().interact();
                 }
+                else if (interactable.CompareTag("Shower"))
+                {
+                    interactable.GetComponent<Shower>().interact();
+                }
+                else if (interactable.CompareTag("Toilet"))
+                {
+                    interactable.GetComponent<Tiolet>().interact();
+                }
 
             }
             else if (box)
