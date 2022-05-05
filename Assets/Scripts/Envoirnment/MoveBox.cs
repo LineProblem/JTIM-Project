@@ -6,7 +6,6 @@ public class MoveBox : MonoBehaviour
 {
     [SerializeField]
     private Transform muzzle;
-    public GameObject boxes;
     public Rigidbody2D rig;
 
     private float grav;
