@@ -11,6 +11,7 @@ TagManager:
   - Microwave
   - Shower
   - Toilet
+  - Laundry
   layers:
   - Default
   - TransparentFX

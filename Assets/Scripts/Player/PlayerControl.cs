@@ -99,6 +99,10 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<Tiolet>().interact();
                 }
+                else if (interactable.CompareTag("Laundry"))
+                {
+                    interactable.GetComponent<Laundry>().interact();
+                }
 
             }
             else if (box)

@@ -14,10 +14,12 @@ public class GameControl : MonoBehaviour
     public float levelTime;
     public List<string> objectives = new List<string>();
 
+    private PlayerControl player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindObjectOfType<PlayerControl>();
     }
 
     // Update is called once per frame
@@ -27,11 +29,31 @@ public class GameControl : MonoBehaviour
         int x = (int)levelTime;
         timeText.text = x.ToString();
 
-        objectiveText.text = "Objectives:\n";
-        for (int i = 0; i < objectives.Count; i++)
+        if (objectives.Count > 0)
         {
-            objectiveText.text += objectives[i] + "\n";
+            objectiveText.text = "Objectives:\n";
+            for (int i = 0; i < objectives.Count; i++)
+            {
+                objectiveText.text += objectives[i] + "\n";
+            }
         }
+        else
+        {
+            objectiveText.text = "Objectives complete!";
+        }
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            if (player.transform.position.y < -2)
+            {
+                objectives.Remove("Get out of room");
+            }
+            else
+            {
+                print(player.transform.position.x);
+            }
+        }
+        
+
         
 
         if (levelTime < 0)
