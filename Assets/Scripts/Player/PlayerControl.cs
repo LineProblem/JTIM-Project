@@ -103,6 +103,13 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<Laundry>().interact();
                 }
+                else if (interactable.CompareTag("Goal"))
+                {
+                    if (interactable.GetComponent<DoorLevelOne>())
+                    {
+                        interactable.GetComponent<DoorLevelOne>().interact();
+                    }
+                }
 
             }
             else if (box)

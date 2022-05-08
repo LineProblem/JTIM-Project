@@ -12,6 +12,7 @@ TagManager:
   - Shower
   - Toilet
   - Laundry
+  - Goal
   layers:
   - Default
   - TransparentFX
