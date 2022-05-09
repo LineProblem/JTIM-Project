@@ -1,0 +1,471 @@
+fileFormatVersion: 2
+guid: 9c8604b36d207f04ea41bf910fe2db22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6630014134746604890
+    second: roguelikeCity_magenta_8
+  - first:
+      213: -3430105465840068207
+    second: roguelikeCity_magenta_9
+  - first:
+      213: -2359270462959364541
+    second: roguelikeCity_magenta_10
+  - first:
+      213: -1446158379069977178
+    second: roguelikeCity_magenta_14
+  - first:
+      213: -32128940698232523
+    second: roguelikeCity_magenta_15
+  - first:
+      213: 1662951767532705751
+    second: roguelikeCity_magenta_16
+  - first:
+      213: 4413899879329640746
+    second: roguelikeCity_magenta_17
+  - first:
+      213: 4631165033582429739
+    second: roguelikeCity_magenta_18
+  - first:
+      213: 1119113338857046390
+    second: roguelikeCity_magenta_19
+  - first:
+      213: -339401057282811583
+    second: roguelikeCity_magenta_20
+  - first:
+      213: -6493339230588409071
+    second: roguelikeCity_magenta_21
+  - first:
+      213: 4727860750251038088
+    second: roguelikeCity_magenta_22
+  - first:
+      213: 8248434212577267565
+    second: roguelikeCity_magenta_23
+  - first:
+      213: -4241581134093092010
+    second: roguelikeCity_magenta_24
+  - first:
+      213: -6720074377585931408
+    second: roguelikeCity_magenta_25
+  - first:
+      213: 4499162156035991880
+    second: roguelikeCity_magenta_26
+  - first:
+      213: 8202579426480512186
+    second: roguelikeCity_magenta_27
+  - first:
+      213: 8446178818979623539
+    second: roguelikeCity_magenta_28
+  - first:
+      213: -6222677490058638432
+    second: roguelikeCity_magenta_29
+  - first:
+      213: 8583205052629422793
+    second: roguelikeCity_magenta_30
+  - first:
+      213: -2744111275326998929
+    second: roguelikeCity_magenta_31
+  - first:
+      213: 8111007118777734461
+    second: roguelikeCity_magenta_32
+  - first:
+      213: 7073476218573406312
+    second: roguelikeCity_magenta_33
+  - first:
+      213: -1413875596675921010
+    second: roguelikeCity_magenta_34
+  - first:
+      213: -5122136164924388372
+    second: roguelikeCity_magenta_35
+  - first:
+      213: 5969333680376557223
+    second: roguelikeCity_magenta_36
+  - first:
+      213: 8702908079497445784
+    second: roguelikeCity_magenta_37
+  - first:
+      213: -8051763544947491724
+    second: roguelikeCity_magenta_38
+  - first:
+      213: -1636533918597076460
+    second: roguelikeCity_magenta_39
+  - first:
+      213: -1114799680685557552
+    second: roguelikeCity_magenta_40
+  - first:
+      213: -3300498244783559270
+    second: roguelikeCity_magenta_41
+  - first:
+      213: 5578077651464062879
+    second: roguelikeCity_magenta_42
+  - first:
+      213: -248112633158913458
+    second: roguelikeCity_magenta_43
+  - first:
+      213: -91903354144237191
+    second: school_0
+  - first:
+      213: 7197599717770333715
+    second: school_1
+  - first:
+      213: -8123454431003470207
+    second: school_2
+  - first:
+      213: -1297164484232680510
+    second: school_3
+  - first:
+      213: 1129502705510920665
+    second: school_4
+  - first:
+      213: 7005932528595898675
+    second: school_5
+  - first:
+      213: -7097524282348234236
+    second: school_6
+  - first:
+      213: 7947023613293552105
+    second: school_7
+  - first:
+      213: 8046374721688190806
+    second: school_8
+  - first:
+      213: 7498224724847044867
+    second: school_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15.8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: school_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 323
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979d096e26e79bef0800000000000000
+      internalID: -91903354144237191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 323
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e072d0fc203e360800000000000000
+      internalID: 7197599717770333715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 374
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18617f22c31b34f80800000000000000
+      internalID: -8123454431003470207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_3
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 323
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbee0636cb8ffde0800000000000000
+      internalID: -1297164484232680510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 374
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d132dee9bcccaf00800000000000000
+      internalID: 1129502705510920665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 374
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331105704821a3160800000000000000
+      internalID: 7005932528595898675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 306
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a9cedf447808d90800000000000000
+      internalID: -7097524282348234236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 374
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1e0040fdf794e60800000000000000
+      internalID: 7947023613293552105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_8
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 306
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f38e78d277aaf60800000000000000
+      internalID: 8046374721688190806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: school_9
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 459
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3092f82f8ab0f0860800000000000000
+      internalID: 7498224724847044867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
