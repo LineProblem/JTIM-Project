@@ -13,6 +13,8 @@ TagManager:
   - Toilet
   - Laundry
   - Goal
+  - Trash
+  - Deadly
   layers:
   - Default
   - TransparentFX

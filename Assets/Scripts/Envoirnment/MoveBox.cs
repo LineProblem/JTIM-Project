@@ -18,7 +18,7 @@ public class MoveBox : MonoBehaviour
     private void Start()
     {
         grav = rig.gravityScale;
-        muzzle = GameObject.Find("Muzzle (1)").GetComponent<Transform>();
+        muzzle = GameObject.Find("Muzzle").GetComponent<Transform>();
     }
 
     // Update is called once per frame

@@ -49,7 +49,7 @@ public class FridgeScript : MonoBehaviour
             else
                 spriteRend.sprite = emptyFridge;
 
-          
+
         }
         else if (spriteRend.sprite == emptyFridge)
         {

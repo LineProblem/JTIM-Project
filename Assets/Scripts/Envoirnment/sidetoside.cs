@@ -20,19 +20,30 @@ public class sidetoside : MonoBehaviour
         movingToTarget = true;
         
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        if(movingToTarget == true)
+        StartCoroutine(Text());
+        IEnumerator Text()  //  <-  its a standalone method
+        {
+            yield return new WaitForSeconds(2);
+
+
+           if (movingToTarget == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetpos, movespeed * Time.deltaTime);
             if(transform.position == targetpos)
             {
+               
                 movingToTarget = false;
+                    yield return new WaitForSeconds(2);
                 cam1.transform.position = camtarget;
             }
         }
+
+        }
+        
        
 
     }

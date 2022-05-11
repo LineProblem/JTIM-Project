@@ -11,22 +11,28 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce;
     public float reducedJumpForce;
     public int maxJumps;
+    private Vector2 spawnPos;
 
     [Header("Components")]
     public Rigidbody2D rig;
+    public Animator anim;
 
     // private variables
     [Header("Accessed by other objects")]
     private GameObject interactable;
     public MoveBox box;
+    private Trash trash;
     public bool holding_box;
     private int curJumps;
     private float curMoveInput;
+    public bool moving;
+    public bool jumping;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnPos = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,8 +49,15 @@ public class PlayerControl : MonoBehaviour
         rig.velocity = new Vector2(curMoveInput * moveSpeed, rig.velocity.y);
         if (curMoveInput != 0)
         {
+            moving = true;
+            anim.SetBool("Walking", true);
             float x = curMoveInput > 0 ? 1 : -1;
             transform.localScale = new Vector3(x, 1, 1);
+        }
+        else
+        {
+            moving = false;
+            anim.SetBool("Walking", false);
         }
     }
 
@@ -53,6 +66,10 @@ public class PlayerControl : MonoBehaviour
         if (collision.CompareTag("Box"))
         {
             box = collision.GetComponent<MoveBox>();
+        }
+        else if (collision.CompareTag("Trash"))
+        {
+            trash = collision.GetComponent<Trash>();
         }
         else if (collision.gameObject.layer == 6)
         {
@@ -67,6 +84,10 @@ public class PlayerControl : MonoBehaviour
             if (!holding_box)
                 box = null;
         }
+        else if (collision.CompareTag("Trash"))
+        {
+            trash = null;
+        }
         else if (collision.gameObject.layer == 6)
         {
             interactable = null;
@@ -77,7 +98,16 @@ public class PlayerControl : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            if (interactable)
+            if (!holding_box && box)
+            {
+                if (box)
+                {
+                    holding_box = true;
+                    box.PickUp();
+                }
+
+            }
+            else if (interactable)
             {
                 if (interactable.CompareTag("Door"))
                 {
@@ -112,14 +142,22 @@ public class PlayerControl : MonoBehaviour
                 }
 
             }
-            else if (box)
+            else if (trash)
             {
                 if (!holding_box)
                 {
                     holding_box = true;
-                    box.PickUp();
+                    trash.PickUp();
                 }
                 else if (holding_box)
+                {
+                    holding_box = false;
+                    trash.DropBox();
+                }
+            }
+            else if (holding_box && box)
+            {
+                if (box)
                 {
                     holding_box = false;
                     box.DropBox();
@@ -127,12 +165,20 @@ public class PlayerControl : MonoBehaviour
             }
 
 
+
         }
+    }
+
+    public void die()
+    {
+        transform.position = spawnPos;
     }
 
     public void onMoveInput(InputAction.CallbackContext context)
     {
+        
         curMoveInput = context.ReadValue<float>();
+        
     }
 
 
@@ -142,10 +188,17 @@ public class PlayerControl : MonoBehaviour
         {
             if (curJumps > 0)
             {
+                jumping = true;
+                anim.SetBool("Jumping", true);
                 jump();
             }
+            
         }
-
+        else
+            {
+                jumping = false;
+                anim.SetBool("Jumping", false);
+            }
     }
     private void jump()
     {
