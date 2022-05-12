@@ -17,7 +17,9 @@ public class Laundry : MonoBehaviour
     public void interact()
     {
         playerSr.enabled = false;
-        gameControl.objectives.Remove("Find clothes");
+        if (gameControl.objectives.Contains("Find clothes"))
+            gameControl.objectives.Remove("Find clothes");
+   
     }
 
     // Update is called once per frame

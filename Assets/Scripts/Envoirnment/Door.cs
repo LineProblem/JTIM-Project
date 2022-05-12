@@ -6,7 +6,7 @@ public class Door : MonoBehaviour
 {
 
     public Vector2 destination;
-    public Transform player;
+    private Transform player;
     public CameraScript Camera;
     public Vector2 cameraPos;
     public float newCameraMin;

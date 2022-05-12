@@ -15,6 +15,7 @@ TagManager:
   - Goal
   - Trash
   - Deadly
+  - Hamper
   layers:
   - Default
   - TransparentFX
