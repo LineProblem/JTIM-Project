@@ -16,6 +16,8 @@ public class PlayerControl : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rig;
     public Animator anim;
+    public AudioSource walkingSnd;
+    public AudioSource jumpSnd;
 
     // private variables
     [Header("Accessed by other objects")]
@@ -59,6 +61,17 @@ public class PlayerControl : MonoBehaviour
             moving = false;
             anim.SetBool("Walking", false);
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (Mathf.Abs(rig.velocity.x) > 4)
+        {
+            if (!walkingSnd.isPlaying)
+                walkingSnd.Play();
+        }
+        else
+            walkingSnd.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -210,6 +223,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void jump()
     {
+        jumpSnd.Play();
         rig.velocity = new Vector2(rig.velocity.x, 0);
         rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         curJumps--;

@@ -16,6 +16,7 @@ TagManager:
   - Trash
   - Deadly
   - Hamper
+  - death
   layers:
   - Default
   - TransparentFX

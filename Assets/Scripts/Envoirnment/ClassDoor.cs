@@ -33,6 +33,7 @@ public class ClassDoor : MonoBehaviour
                 gameControl.objectives.Remove("Enter class on second floor");
                 gameControl.objectives.Add("Find key to room");
                 text.text = "The door is locked.";
+                StartCoroutine(wait());
 
             }
         }

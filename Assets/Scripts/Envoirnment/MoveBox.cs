@@ -7,6 +7,8 @@ public class MoveBox : MonoBehaviour
     [SerializeField]
     private Transform muzzle;
     public Rigidbody2D rig;
+    public AudioSource pickUp;
+    public AudioSource setDown;
 
     private float grav;
 
@@ -30,6 +32,7 @@ public class MoveBox : MonoBehaviour
 
     public void PickUp()
     {
+        pickUp.Play();
         transform.SetParent(muzzle);
         Destroy(rig);
         transform.localPosition = new Vector3(2.5f, 0, 0);
@@ -40,6 +43,7 @@ public class MoveBox : MonoBehaviour
         transform.SetParent(null);
         gameObject.AddComponent<Rigidbody2D>();
         rig = this.GetComponent<Rigidbody2D>();
+        setDown.Play();
         rig.mass = 10;
         rig.gravityScale = grav;
     }
