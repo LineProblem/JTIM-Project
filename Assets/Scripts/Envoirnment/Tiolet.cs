@@ -19,11 +19,15 @@ public class Tiolet : MonoBehaviour
 
     public void interact()
     {
-        moveSpeed = player.moveSpeed;
-        player.moveSpeed = 0;
-        particle.enableEmission = true;
-        sr.enabled = true;
-        StartCoroutine(wait());
+        if (player.moveSpeed != 0)
+        {
+            moveSpeed = player.moveSpeed;
+            player.moveSpeed = 0;
+            particle.enableEmission = true;
+            sr.enabled = true;
+            StartCoroutine(wait());
+        }
+
     }
 
     private IEnumerator wait()

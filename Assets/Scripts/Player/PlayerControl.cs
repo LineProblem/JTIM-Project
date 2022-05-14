@@ -150,6 +150,14 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<Hamper>().interact();
                 }
+                else if (interactable.CompareTag("arcade"))
+                {
+                    interactable.GetComponent<arcadeScript>().interact();
+                }
+                else if (interactable.CompareTag("tv"))
+                {
+                    interactable.GetComponent<TVScript>().interact();
+                }
                 else if (interactable.CompareTag("Goal"))
                 {
                     if (interactable.GetComponent<DoorLevelOne>())

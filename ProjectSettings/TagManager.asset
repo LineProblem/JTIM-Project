@@ -17,6 +17,8 @@ TagManager:
   - Deadly
   - Hamper
   - death
+  - arcade
+  - tv
   layers:
   - Default
   - TransparentFX

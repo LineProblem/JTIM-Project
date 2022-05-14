@@ -44,19 +44,6 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!114 &289180840129502432
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78d04b8a4b4a1a468dac2cc9b72e280, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: end of game
 --- !u!1101 &5603856042053033898
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -91,8 +78,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5603856042053033898}
-  m_StateMachineBehaviours:
-  - {fileID: 289180840129502432}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

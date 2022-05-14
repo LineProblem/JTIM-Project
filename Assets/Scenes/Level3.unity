@@ -8062,7 +8062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 1278776600}
   text: {fileID: 924507239}
-  nextScene: ending
+  nextScene: cutscene 5
 --- !u!61 &563940092
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -58,7 +58,8 @@ public class GameControl : MonoBehaviour
 
         if (levelTime < 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            PlayerPrefs.SetString("Level", SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("gameOver");
         }
     }
 }

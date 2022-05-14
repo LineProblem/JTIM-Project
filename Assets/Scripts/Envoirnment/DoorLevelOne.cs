@@ -50,6 +50,10 @@ public class DoorLevelOne : MonoBehaviour
         {
             if (closedFridge = fridgeSr.sprite)
             {
+                if (PlayerPrefs.GetInt("Unlocked") == 1)
+                {
+                    PlayerPrefs.SetInt("Unlocked", 2);
+                }
                 SceneManager.LoadScene(nextScene);
             }
             else
