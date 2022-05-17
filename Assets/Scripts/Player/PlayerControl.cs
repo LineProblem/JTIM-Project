@@ -152,6 +152,10 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<arcadeScript>().interact();
                 }
+                else if (interactable.CompareTag("locker"))
+                {
+                    interactable.GetComponent<lockerScript>().interact();
+                }
                 else if (interactable.CompareTag("Goal"))
                 {
                     if (interactable.GetComponent<DoorLevelOne>())
