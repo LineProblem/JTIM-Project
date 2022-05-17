@@ -27,7 +27,7 @@ public class sidetoside : MonoBehaviour
         StartCoroutine(Text());
         IEnumerator Text()  //  <-  its a standalone method
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3.5f);
 
 
            if (movingToTarget == true)

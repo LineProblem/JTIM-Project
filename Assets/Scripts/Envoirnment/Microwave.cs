@@ -11,12 +11,15 @@ public class Microwave : MonoBehaviour
     private GameControl gameControl;
     public TextMeshProUGUI cookText;
 
+    private AudioSource eatingSnd;
+
     private bool cooking = false;
     private bool doneCook = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        eatingSnd = GetComponent<AudioSource>();
         cookText.text = "";
         gameControl = FindObjectOfType<GameControl>();
     }
@@ -37,6 +40,7 @@ public class Microwave : MonoBehaviour
         }
         if (doneCook)
         {
+            eatingSnd.Play();
             gameControl.objectives.Remove("Eat burrito");
         }
     }

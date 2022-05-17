@@ -16,7 +16,6 @@ public class PlayerControl : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rig;
     public Animator anim;
-    public AudioSource walkingSnd;
     public AudioSource jumpSnd;
 
     // private variables
@@ -26,9 +25,10 @@ public class PlayerControl : MonoBehaviour
     private Trash trash;
     public bool holding_box;
     private int curJumps;
-    private float curMoveInput;
+    public float curMoveInput;
     public bool moving;
     public bool jumping;
+    
 
 
     // Start is called before the first frame update
@@ -48,8 +48,13 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (holding_box)
+        {
+            box = GetComponentInChildren<MoveBox>();
+        }
         rig.velocity = new Vector2(curMoveInput * moveSpeed, rig.velocity.y);
-        if (curMoveInput != 0)
+       
+        if (curMoveInput != 0 && !jumping)
         {
             moving = true;
             anim.SetBool("Walking", true);
@@ -61,17 +66,6 @@ public class PlayerControl : MonoBehaviour
             moving = false;
             anim.SetBool("Walking", false);
         }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (Mathf.Abs(rig.velocity.x) > 4)
-        {
-            if (!walkingSnd.isPlaying)
-                walkingSnd.Play();
-        }
-        else
-            walkingSnd.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -111,7 +105,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            if (!holding_box && box)
+            if (holding_box == false && box)
             {
                 if (box)
                 {
@@ -150,13 +144,13 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<Hamper>().interact();
                 }
-                else if (interactable.CompareTag("arcade"))
-                {
-                    interactable.GetComponent<arcadeScript>().interact();
-                }
                 else if (interactable.CompareTag("tv"))
                 {
                     interactable.GetComponent<TVScript>().interact();
+                }
+                else if (interactable.CompareTag("arcade"))
+                {
+                    interactable.GetComponent<arcadeScript>().interact();
                 }
                 else if (interactable.CompareTag("Goal"))
                 {
@@ -217,7 +211,9 @@ public class PlayerControl : MonoBehaviour
         {
             if (curJumps > 0)
             {
+                jumpSnd.Play();
                 jumping = true;
+                anim.Play("Jumping");
                 anim.SetBool("Jumping", true);
                 jump();
             }
@@ -231,7 +227,6 @@ public class PlayerControl : MonoBehaviour
     }
     private void jump()
     {
-        jumpSnd.Play();
         rig.velocity = new Vector2(rig.velocity.x, 0);
         rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         curJumps--;

@@ -46,7 +46,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "New action",
+                    "name": "Escape",
                     "type": "Button",
                     "id": "b041e1bf-1858-4805-804f-f6eb12abc61d",
                     "expectedControlType": "Button",
@@ -135,11 +135,11 @@
                 {
                     "name": "",
                     "id": "399868ea-c279-481a-a899-138b8fd94b6d",
-                    "path": "",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -5,15 +5,21 @@ using UnityEngine;
 public class arcadeScript : MonoBehaviour
 {
     public SpriteRenderer sr;
+    private AudioSource bootSnd;
 
     // Start is called before the first frame update
     void Start()
     {
+        bootSnd = GetComponent<AudioSource>();
         sr.enabled = false;
     }
 
     public void interact()
     {
+        if (!sr.enabled)
+        {
+            bootSnd.Play();
+        }
         sr.enabled = true;
         StartCoroutine(wait());
     }

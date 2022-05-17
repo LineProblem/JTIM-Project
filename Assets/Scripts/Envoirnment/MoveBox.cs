@@ -9,6 +9,7 @@ public class MoveBox : MonoBehaviour
     public Rigidbody2D rig;
     public AudioSource pickUp;
     public AudioSource setDown;
+    public bool holdingbox;
 
     private float grav;
 
@@ -21,17 +22,18 @@ public class MoveBox : MonoBehaviour
     {
         grav = rig.gravityScale;
         muzzle = GameObject.Find("Muzzle").GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
-      
         
     }
 
     public void PickUp()
     {
+       
         pickUp.Play();
         transform.SetParent(muzzle);
         Destroy(rig);
@@ -41,10 +43,11 @@ public class MoveBox : MonoBehaviour
     public void DropBox()
     {
         transform.SetParent(null);
+        Destroy(rig);
         gameObject.AddComponent<Rigidbody2D>();
         rig = this.GetComponent<Rigidbody2D>();
         setDown.Play();
-        rig.mass = 10;
+        rig.mass = 1000000000000000;
         rig.gravityScale = grav;
     }
 

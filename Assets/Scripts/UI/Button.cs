@@ -9,10 +9,7 @@ public class Button : MonoBehaviour
     public string LoadScene;
     public void SceneChanger()
     {
-        if (PlayerPrefs.GetInt("Unlocked") == 0)
-        {
-            PlayerPrefs.SetInt("Unlocked", 1);
-        }
+        Debug.Log("button pressed");
         SceneManager.LoadScene(LoadScene);
     }
 

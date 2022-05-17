@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameControl : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class GameControl : MonoBehaviour
     {
         player = FindObjectOfType<PlayerControl>();
     }
+
+    public void OnEscapeInput(InputAction.CallbackContext context)
+    {
+        SceneManager.LoadScene("Start");
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -58,8 +65,7 @@ public class GameControl : MonoBehaviour
 
         if (levelTime < 0)
         {
-            PlayerPrefs.SetString("Level", SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("gameOver");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
