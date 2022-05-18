@@ -22,20 +22,31 @@ public class ClassDoor : MonoBehaviour
 
     public void interact()
     {
-        if (playerControl.box == key)
+        if (gameControl.objectives.Contains("Enter your first class: Chemistry"))
+        {
+            gameControl.objectives.Remove("Enter your first class: Chemistry");
+
+        }
+        if (playerControl.box == key && gameControl.objectives.Count == 0)
         {
             SceneManager.LoadScene(nextScene);
         }
         else
         {
-            if (gameControl.objectives.Contains("Enter class on second floor"))
+            if (!gameControl.objectives.Contains("Find schedule in office"))
             {
-                gameControl.objectives.Remove("Enter class on second floor");
-                gameControl.objectives.Add("Find key to room");
-                text.text = "The door is locked.";
-                StartCoroutine(wait());
-
+                if (gameControl.objectives.Contains("Find backpack in locker") || playerControl.box != key)
+                {
+                    text.text = "I need my backpack!";
+                    StartCoroutine(wait());
+                }
+                else if (gameControl.objectives.Contains("Find money for the vending machine") || gameControl.objectives.Contains("Get an energy drink from the vending machine"))
+                {
+                    text.text = "I need more energy";
+                    StartCoroutine(wait());
+                }
             }
+
         }
     }
 
@@ -48,6 +59,12 @@ public class ClassDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerControl.box == key)
+        {
+            if (gameControl.objectives.Contains("Find backpack in locker"))
+            {
+                gameControl.objectives.Remove("Find backpack in locker");
+            }
+        }
     }
 }

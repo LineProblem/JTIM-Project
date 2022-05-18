@@ -20,6 +20,9 @@ TagManager:
   - arcade
   - tv
   - locker
+  - vending
+  - coin
+  - desk
   layers:
   - Default
   - TransparentFX

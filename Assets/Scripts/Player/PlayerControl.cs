@@ -20,6 +20,7 @@ public class PlayerControl : MonoBehaviour
 
     // private variables
     [Header("Accessed by other objects")]
+    public int money;
     private GameObject interactable;
     public MoveBox box;
     private Trash trash;
@@ -148,6 +149,10 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactable.GetComponent<TVScript>().interact();
                 }
+                else if (interactable.CompareTag("coin"))
+                {
+                    interactable.GetComponent<Coin>().interact();
+                }
                 else if (interactable.CompareTag("arcade"))
                 {
                     interactable.GetComponent<arcadeScript>().interact();
@@ -155,6 +160,14 @@ public class PlayerControl : MonoBehaviour
                 else if (interactable.CompareTag("locker"))
                 {
                     interactable.GetComponent<lockerScript>().interact();
+                }
+                else if (interactable.CompareTag("vending"))
+                {
+                    interactable.GetComponent<vendingScript>().interact();
+                }
+                else if (interactable.CompareTag("desk"))
+                {
+                    interactable.GetComponent<DeskScript>().interact();
                 }
                 else if (interactable.CompareTag("Goal"))
                 {
